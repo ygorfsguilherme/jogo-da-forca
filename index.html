@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/estilo-jogo-da-forca.css">
+	<script src="js/main.js" defer></script>
+	<script src="js/menu.js" defer></script>
+	<script src="js/personagem.js" defer></script>
+	<title>Jogo da Forca</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Jogo da Forca</h1>
+		<div class="display">
+			<div class="personagem">
+				<canvas id="tela" width="100" height="200"></canvas>
+			</div>
+
+			<div id="dicas">
+				DICA:
+				<div></div>
+			</div>
+		</div>
+
+		<div id="local-palavra"></div>
+
+			<div class="teclado">
+				<section class="tecla">
+					<button class="key" id="a" onclick="verificar('a')">A</button>
+					<button class="key" id="b" onclick="verificar('b')">B</button>
+					<button class="key" id="c" onclick="verificar('c')">C</button>
+					<button class="key" id="d" onclick="verificar('d')">D</button>
+					<button class="key" id="e" onclick="verificar('e')">E</button>
+					<button class="key" id="f" onclick="verificar('f')">F</button>
+					<button class="key" id="g" onclick="verificar('g')">G</button>
+					<button class="key" id="h" onclick="verificar('h')">H</button>
+					<button class="key" id="i" onclick="verificar('i')">I</button>			
+				</section>
+
+				<section class="tecla">
+					<button class="key" id="j" onclick="verificar('j')">J</button>
+					<button class="key" id="k" onclick="verificar('k')">K</button>
+					<button class="key" id="l" onclick="verificar('l')">L</button>
+					<button class="key" id="m" onclick="verificar('m')">M</button>
+					<button class="key" id="n" onclick="verificar('n')">N</button>
+					<button class="key" id="o" onclick="verificar('o')">O</button>
+					<button class="key" id="p" onclick="verificar('p')">P</button>
+					<button class="key" id="q" onclick="verificar('q')">Q</button>
+					<button class="key" id="r" onclick="verificar('r')">R</button>
+				</section>
+
+				<section class="tecla">
+					<button class="key" id="s" onclick="verificar('s')">S</button>
+					<button class="key" id="t" onclick="verificar('t')">T</button>
+					<button class="key" id="u" onclick="verificar('u')">U</button>
+					<button class="key" id="v" onclick="verificar('v')">V</button>
+					<button class="key" id="w" onclick="verificar('w')">W</button>
+					<button class="key" id="x" onclick="verificar('x')">X</button>
+					<button class="key" id="y" onclick="verificar('y')">Y</button>
+					<button class="key" id="z" onclick="verificar('z')">Z</button>
+				</section>
+		</div>
+
+		<div class="menu">
+			<section>
+				<div id="msg"></div>
+				
+				<div id="modo">
+					<input id="solo" type="radio" name="modo" value="solo" checked>
+					<label>Solo</label>
+
+					<input id="duo" type="radio" name="modo" value="duo">
+					<label>Duo</label>
+				</div>
+
+				<div class="add-palavra">
+					<label for="">Palavra:</label>
+					<input id="adicionar-texto" type="text">
+					
+					<label for="">Tema:</label>
+					<input id="adicionar-tema" type="text">
+				</div>
+
+				<div id="btn-game">
+					<button id="startgame" onclick="startGame()">
+						<img src="img/play.svg" alt="start" width="40">
+					</button>
+
+					<button id="start" onclick="start()">
+						<img src="img/play.svg" alt="start" width="40">
+					</button>
+
+					<button id="restart" onclick="restart()">
+						<img src="img/refresh.svg" alt="restart" width="40">
+					</button>
+
+					<button id="proximo" onclick="proximo()">
+						<img src="img/next.svg" alt="proximo" width="40">
+					</button>
+				</div>
+			</section>
+		</div>			
+	</div>
+
+	</div>
+</body>
+
+</html>
